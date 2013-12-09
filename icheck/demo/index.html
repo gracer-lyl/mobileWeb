@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customize checkboxes and radio buttons with iCheck (jQuery and Zepto) plugin</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <link href="./css/custom.css?v=0.9.1" rel="stylesheet">
+  <link href="../skins/minimal/_all.css?v=0.9.1" rel="stylesheet">
+  <script src="./js/zepto.js"></script>
+  <script src="../zepto.icheck.min.js?v=0.9.1"></script>
+</head>
+<body>
+      <div class="skin-minimal">
+
+            <div class="skin-section">
+
+              <ul class="list">
+                <li>
+                  <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+                  <label for="minimal-checkbox-1">苹果</label>
+                </li>
+                <li>
+                  <input tabindex="6" type="checkbox" id="minimal-checkbox-2" checked>
+                  <label for="minimal-checkbox-2">三星</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="minimal-checkbox-disabled" disabled>
+                  <label for="minimal-checkbox-disabled">索尼</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="minimal-checkbox-disabled-checked" checked disabled>
+                  <label for="minimal-checkbox-disabled-checked">LG</label>
+                </li>
+              </ul>
+              <ul class="list">
+                <li>
+                  <input tabindex="7" type="radio" id="minimal-radio-1" name="minimal-radio">
+                  <label for="minimal-radio-1">低级</label>
+                </li>
+                <li>
+                  <input tabindex="8" type="radio" id="minimal-radio-2" name="minimal-radio" checked>
+                  <label for="minimal-radio-2">中级</label>
+                </li>
+                <li>
+                  <input type="radio" id="minimal-radio-disabled" disabled>
+                  <label for="minimal-radio-disabled">高级</label>
+                </li>
+                <li>
+                  <input type="radio" id="minimal-radio-disabled-checked" checked disabled>
+                  <label for="minimal-radio-disabled-checked">超级</label>
+                </li>
+              </ul>
+
+              <!--
+              <div class="colors clear">
+                <strong>Color schemes</strong>
+                <ul>
+                  <li class="active" title="Black"></li>
+                  <li class="red" title="Red"></li>
+                  <li class="green" title="Green"></li>
+                  <li class="blue" title="Blue"></li>
+                  <li class="aero" title="Aero"></li>
+                  <li class="grey" title="Grey"></li>
+                  <li class="orange" title="Orange"></li>
+                  <li class="yellow" title="Yellow"></li>
+                  <li class="pink" title="Pink"></li>
+                  <li class="purple" title="Purple"></li>
+                </ul>
+              </div>
+              -->
+
+            </div>
+
+            <script>
+            $(document).ready(function(){
+              $('.list input').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-green',
+                increaseArea: '50%'
+              });
+            });
+            </script>
+
+      </div>
+</body>
+</html>
